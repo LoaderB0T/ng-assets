@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { AssetDictionary } from './asset-dictionary';
 
 @Injectable({
@@ -6,6 +6,10 @@ import { AssetDictionary } from './asset-dictionary';
 })
 export class NgAssetsService {
   private _assets: AssetDictionary;
+
+  constructor(injector: Injector) {
+    this.init(injector.get('ngAssetJsonData'));
+  }
 
   public init(jsonData: any) {
     this._assets = new AssetDictionary();

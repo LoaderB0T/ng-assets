@@ -14,7 +14,7 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "lint": "ng lint",
-    "drop": "yarn run build && yarn publish --access public --no-git-tag-version "
+    "drop": "yarn run build && cd ./dist/ng-assets && yarn publish --access public --no-git-tag-version "
   },
   "private": false,
   "dependencies": {

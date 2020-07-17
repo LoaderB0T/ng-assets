@@ -1,6 +1,14 @@
 {
   "name": "ng-assets",
-  "version": "0.0.1",
+  "version": "0.0.5",
+  "homepage": "https://github.com/LoaderB0T/ng-assets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoaderB0T/ng-assets.git"
+  },
+  "description": "Managing assets in Angular apps",
+  "author": "LoaderB0T",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^10.0.4",
     "@angular/core": "^10.0.4"

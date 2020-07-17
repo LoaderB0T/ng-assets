@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { AssetPipe } from './ng-assets.pipe';
 
 
 
 @NgModule({
-  declarations: [AssetPipe],
-  imports: [
-  ],
-  exports: [],
-  providers: []
+  declarations: [AssetPipe]
 })
-export class NgAssetsModule { }
+export class NgAssetsModule {
+  static forRoot(jsonData: any): ModuleWithProviders<NgAssetsModule> {
+    return {
+      ngModule: NgAssetsModule,
+      providers: [{provide: 'ngAssetJsonData', useValue: jsonData}]
+    };
+  }
+}
